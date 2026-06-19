@@ -1,0 +1,319 @@
+2026-06-19 22:45:05 [error]: PrismaClientInitializationError: error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "postgresql"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at t (D:\AI Complaint Generator\backend\node_modules\@prisma\client\runtime\library.js:112:2488)
+    at async connectPostgres (D:\AI Complaint Generator\backend\src\config\database.ts:22:5)
+    at async startServer (D:\AI Complaint Generator\backend\src\server.ts:83:3)
+2026-06-19 22:45:35 [error]: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\AI Complaint Generator\backend\node_modules\mongoose\lib\connection.js:1169:11)
+    at NativeConnection.openUri (D:\AI Complaint Generator\backend\node_modules\mongoose\lib\connection.js:1100:11)
+    at async connectMongoDB (D:\AI Complaint Generator\backend\src\config\mongodb.ts:7:5)
+    at async startServer (D:\AI Complaint Generator\backend\src\server.ts:84:3)
+2026-06-19 22:46:50 [error]: PrismaClientInitializationError: Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+    at t (D:\AI Complaint Generator\backend\node_modules\@prisma\client\runtime\library.js:112:2488)
+    at async connectPostgres (D:\AI Complaint Generator\backend\src\config\database.ts:22:5)
+    at async startServer (D:\AI Complaint Generator\backend\src\server.ts:83:3)
+2026-06-19 22:47:11 [error]: PrismaClientInitializationError: Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+    at t (D:\AI Complaint Generator\backend\node_modules\@prisma\client\runtime\library.js:112:2488)
+    at async connectPostgres (D:\AI Complaint Generator\backend\src\config\database.ts:22:5)
+    at async startServer (D:\AI Complaint Generator\backend\src\server.ts:83:3)
+2026-06-19 22:47:13 [error]: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\AI Complaint Generator\backend\node_modules\mongoose\lib\connection.js:1169:11)
+    at NativeConnection.openUri (D:\AI Complaint Generator\backend\node_modules\mongoose\lib\connection.js:1100:11)
+    at async connectMongoDB (D:\AI Complaint Generator\backend\src\config\mongodb.ts:7:5)
+    at async startServer (D:\AI Complaint Generator\backend\src\server.ts:84:3)
+2026-06-19 22:47:48 [error]: Prisma error: 
+Invalid `prisma.user.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\auth.routes.ts:72:38
+
+  69 const data = loginSchema.parse(req.body);
+  70 
+  71 try {
+→ 72   const user = await prisma.user.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:47:56 [error]: Prisma error: 
+Invalid `prisma.complaint.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:231:26
+
+  228 }
+  229 
+  230 const [complaints, total] = await Promise.all([
+→ 231   prisma.complaint.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:47:56 [error]: Prisma error: 
+Invalid `prisma.complaint.count()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:238:26
+
+  235   skip: (page - 1) * limit,
+  236   take: limit,
+  237 }),
+→ 238 prisma.complaint.count(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:48:00 [error]: Prisma error: 
+Invalid `prisma.complaint.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:231:26
+
+  228 }
+  229 
+  230 const [complaints, total] = await Promise.all([
+→ 231   prisma.complaint.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:48:00 [error]: Prisma error: 
+Invalid `prisma.complaint.count()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:238:26
+
+  235   skip: (page - 1) * limit,
+  236   take: limit,
+  237 }),
+→ 238 prisma.complaint.count(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:48:33 [error]: Prisma error: 
+Invalid `prisma.user.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\auth.routes.ts:123:36
+
+  120 // GET /api/auth/me
+  121 router.get('/me', authenticate, async (req: AuthRequest, res: Response) => {
+  122   try {
+→ 123     const user = await prisma.user.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:50:31 [error]: Prisma error: 
+Invalid `prisma.complaint.create()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:129:48
+
+  126 
+  127 try {
+  128   // Try to save to database
+→ 129   const complaint = await prisma.complaint.create(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:50:37 [error]: Prisma error: 
+Invalid `prisma.auditBlock.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:311:46
+
+  308 router.get('/:id/audit', async (req: Request, res: Response) => {
+  309   try {
+  310     try {
+→ 311       const blocks = await prisma.auditBlock.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:50:37 [error]: Prisma error: 
+Invalid `prisma.complaint.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:277:48
+
+  274 router.get('/:id', optionalAuth, async (req: AuthRequest, res: Response) => {
+  275   try {
+  276     try {
+→ 277       const complaint = await prisma.complaint.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:50:41 [error]: Prisma error: 
+Invalid `prisma.auditBlock.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:311:46
+
+  308 router.get('/:id/audit', async (req: Request, res: Response) => {
+  309   try {
+  310     try {
+→ 311       const blocks = await prisma.auditBlock.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:50:41 [error]: Prisma error: 
+Invalid `prisma.complaint.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:277:48
+
+  274 router.get('/:id', optionalAuth, async (req: AuthRequest, res: Response) => {
+  275   try {
+  276     try {
+→ 277       const complaint = await prisma.complaint.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:51:06 [error]: Prisma error: 
+Invalid `prisma.auditBlock.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:311:46
+
+  308 router.get('/:id/audit', async (req: Request, res: Response) => {
+  309   try {
+  310     try {
+→ 311       const blocks = await prisma.auditBlock.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:51:07 [error]: Prisma error: 
+Invalid `prisma.complaint.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:277:48
+
+  274 router.get('/:id', optionalAuth, async (req: AuthRequest, res: Response) => {
+  275   try {
+  276     try {
+→ 277       const complaint = await prisma.complaint.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:51:07 [error]: Prisma error: 
+Invalid `prisma.user.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\auth.routes.ts:123:36
+
+  120 // GET /api/auth/me
+  121 router.get('/me', authenticate, async (req: AuthRequest, res: Response) => {
+  122   try {
+→ 123     const user = await prisma.user.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:51:11 [error]: Prisma error: 
+Invalid `prisma.auditBlock.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:311:46
+
+  308 router.get('/:id/audit', async (req: Request, res: Response) => {
+  309   try {
+  310     try {
+→ 311       const blocks = await prisma.auditBlock.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:51:11 [error]: Prisma error: 
+Invalid `prisma.complaint.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:277:48
+
+  274 router.get('/:id', optionalAuth, async (req: AuthRequest, res: Response) => {
+  275   try {
+  276     try {
+→ 277       const complaint = await prisma.complaint.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:51:30 [error]: Prisma error: 
+Invalid `prisma.complaint.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:231:26
+
+  228 }
+  229 
+  230 const [complaints, total] = await Promise.all([
+→ 231   prisma.complaint.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:51:30 [error]: Prisma error: 
+Invalid `prisma.complaint.count()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:238:26
+
+  235   skip: (page - 1) * limit,
+  236   take: limit,
+  237 }),
+→ 238 prisma.complaint.count(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:51:30 [error]: Prisma error: 
+Invalid `prisma.user.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\auth.routes.ts:123:36
+
+  120 // GET /api/auth/me
+  121 router.get('/me', authenticate, async (req: AuthRequest, res: Response) => {
+  122   try {
+→ 123     const user = await prisma.user.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:51:34 [error]: Prisma error: 
+Invalid `prisma.complaint.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:231:26
+
+  228 }
+  229 
+  230 const [complaints, total] = await Promise.all([
+→ 231   prisma.complaint.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:51:34 [error]: Prisma error: 
+Invalid `prisma.complaint.count()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:238:26
+
+  235   skip: (page - 1) * limit,
+  236   take: limit,
+  237 }),
+→ 238 prisma.complaint.count(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:51:58 [error]: Prisma error: 
+Invalid `prisma.auditBlock.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:311:46
+
+  308 router.get('/:id/audit', async (req: Request, res: Response) => {
+  309   try {
+  310     try {
+→ 311       const blocks = await prisma.auditBlock.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:51:58 [error]: Prisma error: 
+Invalid `prisma.complaint.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:277:48
+
+  274 router.get('/:id', optionalAuth, async (req: AuthRequest, res: Response) => {
+  275   try {
+  276     try {
+→ 277       const complaint = await prisma.complaint.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:51:58 [error]: Prisma error: 
+Invalid `prisma.user.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\auth.routes.ts:123:36
+
+  120 // GET /api/auth/me
+  121 router.get('/me', authenticate, async (req: AuthRequest, res: Response) => {
+  122   try {
+→ 123     const user = await prisma.user.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:52:02 [error]: Prisma error: 
+Invalid `prisma.auditBlock.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:311:46
+
+  308 router.get('/:id/audit', async (req: Request, res: Response) => {
+  309   try {
+  310     try {
+→ 311       const blocks = await prisma.auditBlock.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-19 22:52:02 [error]: Prisma error: 
+Invalid `prisma.complaint.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:277:48
+
+  274 router.get('/:id', optionalAuth, async (req: AuthRequest, res: Response) => {
+  275   try {
+  276     try {
+→ 277       const complaint = await prisma.complaint.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.

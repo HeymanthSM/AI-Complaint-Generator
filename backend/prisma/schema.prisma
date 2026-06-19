@@ -1,0 +1,238 @@
+// Prisma Schema for AI Civic Navigator
+// PostgreSQL Database Models
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// User Model
+// ============================================
+model User {
+  id            String         @id @default(uuid())
+  email         String         @unique
+  name          String
+  password      String?
+  phone         String?
+  avatar        String?
+  role          UserRole       @default(CITIZEN)
+  authProvider  AuthProvider    @default(LOCAL)
+  latitude      Float?
+  longitude     Float?
+  address       String?
+  city          String?
+  state         String?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  complaints    Complaint[]
+  notifications Notification[]
+
+  @@map("users")
+}
+
+enum UserRole {
+  CITIZEN
+  OFFICIAL
+  ADMIN
+}
+
+enum AuthProvider {
+  LOCAL
+  GOOGLE
+  GITHUB
+}
+
+// ============================================
+// Complaint Model
+// ============================================
+model Complaint {
+  id                    String           @id @default(uuid())
+  title                 String
+  description           String           @db.Text
+  generatedLetter       String?          @db.Text
+  category              ComplaintCategory
+  departmentId          String?
+  department            Department?      @relation(fields: [departmentId], references: [id])
+  priority              Priority         @default(MEDIUM)
+  status                ComplaintStatus   @default(SUBMITTED)
+  
+  // Location
+  latitude              Float?
+  longitude             Float?
+  address               String?
+  ward                  String?
+  municipality          String?
+  district              String?
+  state                 String?
+
+  // User
+  userId                String
+  user                  User             @relation(fields: [userId], references: [id])
+
+  // Media
+  images                String[]
+  voiceNote             String?
+
+  // AI fields
+  language              String           @default("en")
+  translatedTitle       String?
+  translatedDescription String?          @db.Text
+  sentimentScore        Float?
+  sentimentLabel        String?
+  isEmergency           Boolean          @default(false)
+  emergencyReason       String?
+  aiConfidence          Float?
+
+  // Duplicate tracking
+  isDuplicate           Boolean          @default(false)
+  duplicateOfId         String?
+  duplicateOf           Complaint?       @relation("DuplicateComplaints", fields: [duplicateOfId], references: [id])
+  duplicates            Complaint[]      @relation("DuplicateComplaints")
+
+  // Timestamps
+  createdAt             DateTime         @default(now())
+  updatedAt             DateTime         @updatedAt
+  resolvedAt            DateTime?
+  estimatedResolution   DateTime?
+
+  // Relations
+  auditBlocks           AuditBlock[]
+  notifications         Notification[]
+
+  @@index([userId])
+  @@index([departmentId])
+  @@index([status])
+  @@index([category])
+  @@index([priority])
+  @@index([createdAt])
+  @@map("complaints")
+}
+
+enum ComplaintCategory {
+  POTHOLE
+  GARBAGE
+  STREETLIGHT
+  WATER_LEAK
+  ROAD_DAMAGE
+  DRAINAGE
+  SEWAGE
+  ELECTRICITY
+  PUBLIC_TRANSPORT
+  NOISE_POLLUTION
+  AIR_POLLUTION
+  ILLEGAL_CONSTRUCTION
+  ENCROACHMENT
+  STRAY_ANIMALS
+  TRAFFIC
+  PUBLIC_SAFETY
+  SANITATION
+  PARKS_GARDENS
+  OTHER
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+  EMERGENCY
+}
+
+enum ComplaintStatus {
+  SUBMITTED
+  UNDER_REVIEW
+  ASSIGNED
+  IN_PROGRESS
+  ESCALATED
+  RESOLVED
+  CLOSED
+  REJECTED
+}
+
+// ============================================
+// Department Model
+// ============================================
+model Department {
+  id              String       @id @default(uuid())
+  name            String       @unique
+  code            String       @unique
+  description     String?
+  contactEmail    String?
+  contactPhone    String?
+  categories      ComplaintCategory[]
+  avgResponseDays Int          @default(7)
+  isActive        Boolean      @default(true)
+  createdAt       DateTime     @default(now())
+
+  complaints      Complaint[]
+
+  @@map("departments")
+}
+
+// ============================================
+// Blockchain Audit Trail
+// ============================================
+model AuditBlock {
+  id            String   @id @default(uuid())
+  blockIndex    Int
+  complaintId   String
+  complaint     Complaint @relation(fields: [complaintId], references: [id])
+  action        AuditAction
+  data          Json
+  hash          String
+  previousHash  String
+  nonce         Int      @default(0)
+  timestamp     DateTime @default(now())
+
+  @@index([complaintId])
+  @@index([hash])
+  @@map("audit_blocks")
+}
+
+enum AuditAction {
+  CREATED
+  UPDATED
+  STATUS_CHANGED
+  ASSIGNED
+  ESCALATED
+  RESOLVED
+  CLOSED
+  COMMENT_ADDED
+  DUPLICATE_LINKED
+}
+
+// ============================================
+// Notification Model
+// ============================================
+model Notification {
+  id          String           @id @default(uuid())
+  userId      String
+  user        User             @relation(fields: [userId], references: [id])
+  complaintId String?
+  complaint   Complaint?       @relation(fields: [complaintId], references: [id])
+  title       String
+  message     String
+  type        NotificationType
+  read        Boolean          @default(false)
+  createdAt   DateTime         @default(now())
+
+  @@index([userId])
+  @@index([read])
+  @@map("notifications")
+}
+
+enum NotificationType {
+  STATUS_UPDATE
+  ASSIGNMENT
+  ESCALATION
+  RESOLUTION
+  DUPLICATE
+  EMERGENCY
+  SYSTEM
+}
