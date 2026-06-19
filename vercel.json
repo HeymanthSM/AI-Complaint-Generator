@@ -7,7 +7,7 @@
     },
     "backend": {
       "root": "backend",
-      "entrypoint": "dist/server.js",
+      "entrypoint": "src/server.ts",
       "buildCommand": "npm run build",
       "routePrefix": "/_/backend"
     }
