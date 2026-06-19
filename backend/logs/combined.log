@@ -705,3 +705,632 @@ Please make sure your database server is running at `localhost:5432`.
 ║  Maps:      ⚠️  Using Leaflet                   ║
 ╚══════════════════════════════════════════════════╝
     
+2026-06-20 00:58:54 [error]: PrismaClientInitializationError: Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+    at t (D:\AI Complaint Generator\backend\node_modules\@prisma\client\runtime\library.js:112:2488)
+    at async connectPostgres (D:\AI Complaint Generator\backend\src\config\database.ts:22:5)
+    at async startServer (D:\AI Complaint Generator\backend\src\server.ts:95:3)
+2026-06-20 00:58:54 [warn]: ⚠️ Running without PostgreSQL - using mock data
+2026-06-20 00:58:56 [error]: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\AI Complaint Generator\backend\node_modules\mongoose\lib\connection.js:1169:11)
+    at NativeConnection.openUri (D:\AI Complaint Generator\backend\node_modules\mongoose\lib\connection.js:1100:11)
+    at async connectMongoDB (D:\AI Complaint Generator\backend\src\config\mongodb.ts:7:5)
+    at async startServer (D:\AI Complaint Generator\backend\src\server.ts:96:3)
+2026-06-20 00:58:56 [warn]: ⚠️ Running without MongoDB - chat history will not persist
+2026-06-20 00:58:56 [info]: 
+╔══════════════════════════════════════════════════╗
+║         🏛️  AI CIVIC NAVIGATOR API              ║
+║──────────────────────────────────────────────────║
+║  Server:    http://localhost:5000              ║
+║  Env:       development                         ║
+║  OpenAI:    ⚠️  Simulation mode                 ║
+║  Gemini:    ⚠️  Simulation mode                 ║
+║  Maps:      ⚠️  Using Leaflet                   ║
+╚══════════════════════════════════════════════════╝
+    
+2026-06-20 00:59:05 [error]: Prisma error: 
+Invalid `prisma.user.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\auth.routes.ts:72:38
+
+  69 const data = loginSchema.parse(req.body);
+  70 
+  71 try {
+→ 72   const user = await prisma.user.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 00:59:10 [error]: Prisma error: 
+Invalid `prisma.complaint.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:232:26
+
+  229 }
+  230 
+  231 const [complaints, total] = await Promise.all([
+→ 232   prisma.complaint.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 00:59:10 [error]: Prisma error: 
+Invalid `prisma.complaint.count()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:239:26
+
+  236   skip: (page - 1) * limit,
+  237   take: limit,
+  238 }),
+→ 239 prisma.complaint.count(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 00:59:14 [error]: Prisma error: 
+Invalid `prisma.complaint.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:232:26
+
+  229 }
+  230 
+  231 const [complaints, total] = await Promise.all([
+→ 232   prisma.complaint.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 00:59:14 [error]: Prisma error: 
+Invalid `prisma.complaint.count()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:239:26
+
+  236   skip: (page - 1) * limit,
+  237   take: limit,
+  238 }),
+→ 239 prisma.complaint.count(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 00:59:39 [error]: Prisma error: 
+Invalid `prisma.user.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\auth.routes.ts:123:36
+
+  120 // GET /api/auth/me
+  121 router.get('/me', authenticate, async (req: AuthRequest, res: Response) => {
+  122   try {
+→ 123     const user = await prisma.user.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 00:59:58 [error]: Prisma error: 
+Invalid `prisma.user.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\auth.routes.ts:72:38
+
+  69 const data = loginSchema.parse(req.body);
+  70 
+  71 try {
+→ 72   const user = await prisma.user.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:00:03 [error]: Prisma error: 
+Invalid `prisma.complaint.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:232:26
+
+  229 }
+  230 
+  231 const [complaints, total] = await Promise.all([
+→ 232   prisma.complaint.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:00:03 [error]: Prisma error: 
+Invalid `prisma.complaint.count()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:239:26
+
+  236   skip: (page - 1) * limit,
+  237   take: limit,
+  238 }),
+→ 239 prisma.complaint.count(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:00:07 [error]: Prisma error: 
+Invalid `prisma.complaint.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:232:26
+
+  229 }
+  230 
+  231 const [complaints, total] = await Promise.all([
+→ 232   prisma.complaint.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:00:07 [error]: Prisma error: 
+Invalid `prisma.complaint.count()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:239:26
+
+  236   skip: (page - 1) * limit,
+  237   take: limit,
+  238 }),
+→ 239 prisma.complaint.count(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:00:22 [error]: Prisma error: 
+Invalid `prisma.complaint.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:232:26
+
+  229 }
+  230 
+  231 const [complaints, total] = await Promise.all([
+→ 232   prisma.complaint.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:00:22 [error]: Prisma error: 
+Invalid `prisma.complaint.count()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:239:26
+
+  236   skip: (page - 1) * limit,
+  237   take: limit,
+  238 }),
+→ 239 prisma.complaint.count(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:00:22 [error]: Prisma error: 
+Invalid `prisma.user.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\auth.routes.ts:123:36
+
+  120 // GET /api/auth/me
+  121 router.get('/me', authenticate, async (req: AuthRequest, res: Response) => {
+  122   try {
+→ 123     const user = await prisma.user.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:00:27 [error]: Prisma error: 
+Invalid `prisma.complaint.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:232:26
+
+  229 }
+  230 
+  231 const [complaints, total] = await Promise.all([
+→ 232   prisma.complaint.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:00:27 [error]: Prisma error: 
+Invalid `prisma.complaint.count()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:239:26
+
+  236   skip: (page - 1) * limit,
+  237   take: limit,
+  238 }),
+→ 239 prisma.complaint.count(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:08:59 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:09:53 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:09:54 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:09:56 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:09:57 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:09:59 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:10:40 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:10:41 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:10:46 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:10:46 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:10:47 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:10:55 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:10:55 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:10:56 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:10:56 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:10:56 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:10:56 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:10 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:10 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:10 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:11 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:11 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:11 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:11 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:22 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:22 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:23 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:23 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:23 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:23 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:23 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:24 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:24 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:11:24 [error]: Error: Not allowed by CORS
+    at origin (D:\AI Complaint Generator\backend\src\server.ts:34:16)
+    at D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (D:\AI Complaint Generator\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (D:\AI Complaint Generator\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\AI Complaint Generator\backend\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (D:\AI Complaint Generator\backend\node_modules\helmet\index.cjs:537:6)
+2026-06-20 01:14:03 [error]: Prisma error: 
+Invalid `prisma.complaint.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:232:26
+
+  229 }
+  230 
+  231 const [complaints, total] = await Promise.all([
+→ 232   prisma.complaint.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:14:03 [error]: Prisma error: 
+Invalid `prisma.complaint.count()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:239:26
+
+  236   skip: (page - 1) * limit,
+  237   take: limit,
+  238 }),
+→ 239 prisma.complaint.count(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:14:03 [error]: Prisma error: 
+Invalid `prisma.user.findUnique()` invocation in
+D:\AI Complaint Generator\backend\src\routes\auth.routes.ts:123:36
+
+  120 // GET /api/auth/me
+  121 router.get('/me', authenticate, async (req: AuthRequest, res: Response) => {
+  122   try {
+→ 123     const user = await prisma.user.findUnique(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:14:08 [error]: Prisma error: 
+Invalid `prisma.complaint.findMany()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:232:26
+
+  229 }
+  230 
+  231 const [complaints, total] = await Promise.all([
+→ 232   prisma.complaint.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:14:08 [error]: Prisma error: 
+Invalid `prisma.complaint.count()` invocation in
+D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:239:26
+
+  236   skip: (page - 1) * limit,
+  237   take: limit,
+  238 }),
+→ 239 prisma.complaint.count(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.

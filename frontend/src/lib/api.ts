@@ -1,4 +1,20 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const getApiUrl = () => {
+  if (process.env.NEXT_PUBLIC_API_URL) {
+    return process.env.NEXT_PUBLIC_API_URL;
+  }
+  
+  if (typeof window !== 'undefined') {
+    const hostname = window.location.hostname;
+    if (hostname !== 'localhost' && hostname !== '127.0.0.1') {
+      // In Vercel Services, the backend is hosted at the /_/backend prefix of the same domain
+      return `${window.location.origin}/_/backend/api`;
+    }
+  }
+  
+  return 'http://localhost:5000/api';
+};
+
+const API_URL = getApiUrl();
 
 async function getHeaders(customHeaders: Record<string, string> = {}): Promise<Record<string, string>> {
   const headers: Record<string, string> = { ...customHeaders };
