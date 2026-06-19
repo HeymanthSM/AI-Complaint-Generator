@@ -35,7 +35,16 @@ router.post('/register', async (req: Request, res: Response) => {
       res.status(201).json({ user, token });
     } catch (dbError: any) {
       // Demo mode - return mock data when DB is not available
-      if (dbError.constructor.name === 'PrismaClientInitializationError' || dbError.code === 'P2002') {
+      const isPrismaOrDbError = 
+        dbError.code === 'P2002' ||
+        dbError.name === 'PrismaClientInitializationError' ||
+        dbError.constructor?.name?.includes('Prisma') ||
+        dbError.message?.includes('Prisma') ||
+        dbError.message?.includes('database') ||
+        dbError.message?.includes('reach database') ||
+        dbError.message?.includes('connect');
+
+      if (isPrismaOrDbError) {
         const mockUser = {
           id: 'demo-' + Date.now(),
           email: data.email,

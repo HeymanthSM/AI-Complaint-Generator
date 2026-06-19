@@ -52,16 +52,24 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(rateLimiter(200, 60000));
 
 // Ensure upload directory exists
-const uploadDir = path.resolve(env.UPLOAD_DIR);
-if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir, { recursive: true });
+try {
+  const uploadDir = path.resolve(env.UPLOAD_DIR);
+  if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir, { recursive: true });
+  }
+  app.use('/uploads', express.static(uploadDir));
+} catch (e) {
+  console.warn('⚠️ Could not create upload directory:', e);
 }
-app.use('/uploads', express.static(uploadDir));
 
 // Ensure logs directory exists
-const logsDir = path.resolve('logs');
-if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });
+try {
+  const logsDir = path.resolve('logs');
+  if (!fs.existsSync(logsDir)) {
+    fs.mkdirSync(logsDir, { recursive: true });
+  }
+} catch (e) {
+  console.warn('⚠️ Could not create logs directory:', e);
 }
 
 // ============================================

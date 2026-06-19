@@ -1334,3 +1334,75 @@ D:\AI Complaint Generator\backend\src\routes\complaint.routes.ts:239:26
 Can't reach database server at `localhost:5432`
 
 Please make sure your database server is running at `localhost:5432`.
+2026-06-20 01:14:18 [error]: PrismaClientInitializationError: Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+    at t (D:\AI Complaint Generator\backend\node_modules\@prisma\client\runtime\library.js:112:2488)
+    at async connectPostgres (D:\AI Complaint Generator\backend\src\config\database.ts:22:5)
+    at async startServer (D:\AI Complaint Generator\backend\src\server.ts:104:3)
+2026-06-20 01:14:18 [warn]: ⚠️ Running without PostgreSQL - using mock data
+2026-06-20 01:14:21 [error]: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\AI Complaint Generator\backend\node_modules\mongoose\lib\connection.js:1169:11)
+    at NativeConnection.openUri (D:\AI Complaint Generator\backend\node_modules\mongoose\lib\connection.js:1100:11)
+    at async connectMongoDB (D:\AI Complaint Generator\backend\src\config\mongodb.ts:7:5)
+    at async startServer (D:\AI Complaint Generator\backend\src\server.ts:105:3)
+2026-06-20 01:14:21 [warn]: ⚠️ Running without MongoDB - chat history will not persist
+2026-06-20 01:14:21 [info]: 
+╔══════════════════════════════════════════════════╗
+║         🏛️  AI CIVIC NAVIGATOR API              ║
+║──────────────────────────────────────────────────║
+║  Server:    http://localhost:5000              ║
+║  Env:       development                         ║
+║  OpenAI:    ⚠️  Simulation mode                 ║
+║  Gemini:    ⚠️  Simulation mode                 ║
+║  Maps:      ⚠️  Using Leaflet                   ║
+╚══════════════════════════════════════════════════╝
+    
+2026-06-20 01:25:23 [error]: PrismaClientInitializationError: Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+    at t (D:\AI Complaint Generator\backend\node_modules\@prisma\client\runtime\library.js:112:2488)
+    at async connectPostgres (D:\AI Complaint Generator\backend\src\config\database.ts:22:5)
+    at async startServer (D:\AI Complaint Generator\backend\src\server.ts:104:3)
+2026-06-20 01:25:24 [warn]: ⚠️ Running without PostgreSQL - using mock data
+2026-06-20 01:25:26 [error]: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\AI Complaint Generator\backend\node_modules\mongoose\lib\connection.js:1169:11)
+    at NativeConnection.openUri (D:\AI Complaint Generator\backend\node_modules\mongoose\lib\connection.js:1100:11)
+    at async connectMongoDB (D:\AI Complaint Generator\backend\src\config\mongodb.ts:7:5)
+    at async startServer (D:\AI Complaint Generator\backend\src\server.ts:105:3)
+2026-06-20 01:25:26 [warn]: ⚠️ Running without MongoDB - chat history will not persist
+2026-06-20 01:25:26 [info]: 
+╔══════════════════════════════════════════════════╗
+║         🏛️  AI CIVIC NAVIGATOR API              ║
+║──────────────────────────────────────────────────║
+║  Server:    http://localhost:5000              ║
+║  Env:       development                         ║
+║  OpenAI:    ⚠️  Simulation mode                 ║
+║  Gemini:    ⚠️  Simulation mode                 ║
+║  Maps:      ⚠️  Using Leaflet                   ║
+╚══════════════════════════════════════════════════╝
+    
+2026-06-20 01:25:33 [error]: PrismaClientInitializationError: Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+    at t (D:\AI Complaint Generator\backend\node_modules\@prisma\client\runtime\library.js:112:2488)
+    at async connectPostgres (D:\AI Complaint Generator\backend\src\config\database.ts:22:5)
+    at async startServer (D:\AI Complaint Generator\backend\src\server.ts:112:3)
+2026-06-20 01:25:33 [warn]: ⚠️ Running without PostgreSQL - using mock data
+2026-06-20 01:25:35 [error]: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\AI Complaint Generator\backend\node_modules\mongoose\lib\connection.js:1169:11)
+    at NativeConnection.openUri (D:\AI Complaint Generator\backend\node_modules\mongoose\lib\connection.js:1100:11)
+    at async connectMongoDB (D:\AI Complaint Generator\backend\src\config\mongodb.ts:7:5)
+    at async startServer (D:\AI Complaint Generator\backend\src\server.ts:113:3)
+2026-06-20 01:25:35 [warn]: ⚠️ Running without MongoDB - chat history will not persist
+2026-06-20 01:25:35 [info]: 
+╔══════════════════════════════════════════════════╗
+║         🏛️  AI CIVIC NAVIGATOR API              ║
+║──────────────────────────────────────────────────║
+║  Server:    http://localhost:5000              ║
+║  Env:       development                         ║
+║  OpenAI:    ⚠️  Simulation mode                 ║
+║  Gemini:    ⚠️  Simulation mode                 ║
+║  Maps:      ⚠️  Using Leaflet                   ║
+╚══════════════════════════════════════════════════╝
+    
